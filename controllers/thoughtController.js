@@ -36,5 +36,27 @@ module.exports = {
             console.log(error)
             res.status(500).json(err)
         }
+    },
+    async updateThought(req, res) {
+        try {
+            const thought = await Thought.findByIdAndUpdate(
+                { _id: req.params.thoughtId },
+                { $set: req.body },
+                { runValidators: true, new: true },
+            )
+
+            res.json(thought)
+        } catch (error) {
+            console.log(error)
+            res.status(500).json(err)
+        }
+    },
+    async deleteThought(req, res) {
+        try {
+
+        } catch (error) {
+            console.log(error)
+            res.status(500).json(err)
+        }
     }
 }
