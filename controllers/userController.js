@@ -54,6 +54,28 @@ module.exports = {
             res.status(500).json(err)
         }
     },
-    
+    async deleteUser(req, res) {
+        try {
+            const user = await User.findOneAndDelete({ _id: req.params.userId })
+
+            if (!user) {
+                return res.status(404).json({ message: 'No user with that ID' })
+            }
+
+            const thoughts = await Thought.deleteMany({ _id: { $in: user.thoughts } })
+
+            res.json(user)
+        } catch (error) {
+            console.log(error)
+            res.status(500).json(err)
+        }
+    },
+    async addFriend(req, res) {
+
+    },
+    async deleteFriend(req, res) {
+
+    }
+
 
 };
