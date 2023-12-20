@@ -18,7 +18,10 @@ router.route('/')
 .get(getUsers)
 .post(addUser);
 
-// router.route('/:userId').get(getUser).put(upDateUser).delete(deleteUser);
+router.route('/:userId')
+.get(getUser)
+// .put(upDateUser)
+// .delete(deleteUser);
 
 // router.route('/:userId/friends/:friendId').post(addFriend).delete(deleteFriend);
 
