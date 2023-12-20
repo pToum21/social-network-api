@@ -21,5 +21,13 @@ module.exports = {
             console.log(error)
             res.status(500).json(err)
         }
+    },
+    async addThoughts(req, res) {
+        try {
+            
+        } catch (error) {
+            console.log(error)
+            res.status(500).json(err)
+        }
     }
 }
