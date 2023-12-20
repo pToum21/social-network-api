@@ -15,10 +15,10 @@ const
 
 router.route('/')
 .get(getThoughts)
-// .post(addThoughts);
+.post(addThoughts);
 
 router.route('/:thoughtId').get(getSingleThought)
-// .put(updateThought)
+.put(updateThought)
 // .delete(deleteThought);
 
 // router.route('/:thoughtId/reactions')
