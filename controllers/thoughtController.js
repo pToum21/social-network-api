@@ -1,5 +1,5 @@
 const { Thought, User } = require('../models');
-const { findOne } = require('../models/User');
+
 
 module.exports = {
     async getThoughts(req, res) {
