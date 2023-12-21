@@ -15,17 +15,17 @@ const
     } = require('../../controllers/userController');
 
 router.route('/')
-.get(getUsers)
-.post(addUser);
+    .get(getUsers)
+    .post(addUser);
 
 router.route('/:userId')
-.get(getUser)
-.put(upDateUser)
-.delete(deleteUser);
+    .get(getUser)
+    .put(upDateUser)
+    .delete(deleteUser);
 
 router.route('/:userId/friends/:friendId')
-.post(addFriend)
-.delete(deleteFriend);
+    .post(addFriend)
+    .delete(deleteFriend);
 
 
 
