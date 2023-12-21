@@ -71,7 +71,12 @@ module.exports = {
         }
     },
     async addFriend(req, res) {
+        try {
 
+        } catch (error) {
+            console.log(error)
+            res.status(500).json(err)
+        }
     },
     async deleteFriend(req, res) {
 
