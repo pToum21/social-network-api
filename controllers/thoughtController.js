@@ -9,7 +9,7 @@ module.exports = {
             res.json(thoughts)
         } catch (error) {
             console.log(error)
-            res.status(500).json(err)
+            res.status(500).json(error)
         }
     },
     async getSingleThought(req, res) {
@@ -21,7 +21,7 @@ module.exports = {
             res.json(thought)
         } catch (error) {
             console.log(error)
-            res.status(500).json(err)
+            res.status(500).json(error)
         }
     },
     async addThoughts(req, res) {
@@ -51,7 +51,7 @@ module.exports = {
             res.json(thought)
         } catch (error) {
             console.log(error)
-            res.status(500).json(err)
+            res.status(500).json(error)
         }
     },
     async deleteThought(req, res) {
@@ -65,7 +65,7 @@ module.exports = {
             res.json(thought)
         } catch (error) {
             console.log(error)
-            res.status(500).json(err)
+            res.status(500).json(error)
         }
     },
     async addReaction(req, res) {
@@ -82,7 +82,7 @@ module.exports = {
             res.json(thought)
         } catch (error) {
             console.log(error)
-            res.status(500).json(err)
+            res.status(500).json(error)
         }
     },
     async deleteReaction(req, res) {
@@ -96,10 +96,10 @@ module.exports = {
             if (!thought) {
                 return res.status(404).json({ message: 'No thought with that ID' });
             }
-            res.json(thought)
+            res.json({message: "delted"})
         } catch (error) {
             console.log(error)
-            res.status(500).json(err)
+            res.status(500).json(error)
         }
     },
 };
