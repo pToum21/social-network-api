@@ -9,8 +9,6 @@ const
         deleteThought,
         addReaction,
         deleteReaction,
-
-        // add other controllers in here
     } = require('../../controllers/thoughtController');
 
 router.route('/')

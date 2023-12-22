@@ -3,7 +3,6 @@ const { User, Thought } = require('../../models');
 
 const
     {
-
         getUsers,
         getUser,
         addUser,
@@ -11,7 +10,6 @@ const
         deleteUser,
         addFriend,
         deleteFriend
-
     } = require('../../controllers/userController');
 
 router.route('/')
@@ -26,7 +24,5 @@ router.route('/:userId')
 router.route('/:userId/friends/:friendId')
     .post(addFriend)
     .delete(deleteFriend);
-
-
 
 module.exports = router;
