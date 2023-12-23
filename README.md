@@ -33,7 +33,7 @@ you can use compass to test the database
 https://drive.google.com/file/d/1_Y0A8vXqLIxLG-PO-9ipD3DB_Jq5N10W/view
 
 ## Preview Photo
-
+![preview-photo](https://github.com/pToum21/social-network-api/assets/138056441/988906c0-9e48-4273-a00e-d05c6879a798)
 
 ## Qustions - ❓
 Feel Free to contact me at pey3moo3@gmail.com or [ptoum21](https://github.com/ptoum21).
