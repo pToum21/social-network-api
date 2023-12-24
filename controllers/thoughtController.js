@@ -1,8 +1,9 @@
 const { json } = require('express');
 const { Thought, User } = require('../models');
 
-
+// tied back to thoughtRoutes in the routes folder
 module.exports = {
+    //get all thoughts
     async getThoughts(req, res) {
         try {
             const thoughts = await Thought.find();
