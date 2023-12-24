@@ -1,3 +1,4 @@
+// seeded users
 const users = [
     {
         username: 'Brick',
