@@ -2,6 +2,7 @@ const { json } = require('express');
 const { Thought, User } = require('../models');
 
 // tied back to thoughtRoutes in the routes folder
+// each controller is inside of module.exports meaning all are exported
 module.exports = {
     //get all thoughts
     async getThoughts(req, res) {
@@ -13,6 +14,7 @@ module.exports = {
             res.status(500).json(error)
         }
     },
+    // get single thought by id
     async getSingleThought(req, res) {
         try {
             const thought = await Thought.findOne({ _id: req.params.thoughtId })
@@ -25,6 +27,7 @@ module.exports = {
             res.status(500).json(error)
         }
     },
+    // create a thought thru a post 
     async addThoughts(req, res) {
         try {
             const thought = await Thought.create(req.body);
@@ -39,6 +42,7 @@ module.exports = {
             res.status(500).json(error)
         }
     },
+    // update a thought thru a put
     async updateThought(req, res) {
         try {
             const thought = await Thought.findByIdAndUpdate(
@@ -55,6 +59,7 @@ module.exports = {
             res.status(500).json(error)
         }
     },
+    // delete a thought thru a delete
     async deleteThought(req, res) {
         try {
             const thought = await Thought.findOneAndDelete({ _id: req.params.thoughtId })
@@ -69,6 +74,7 @@ module.exports = {
             res.status(500).json(error)
         }
     },
+    // add a reaction to a thought using a post request
     async addReaction(req, res) {
         try {
             const thought = await Thought.findOneAndUpdate(
@@ -86,6 +92,7 @@ module.exports = {
             res.status(500).json(error)
         }
     },
+    // remove a reaction from a thought but running a delete request
     async deleteReaction(req, res) {
         try {
             const thought = await Thought.findOneAndUpdate(
