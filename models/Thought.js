@@ -1,5 +1,6 @@
 const { Schema, model, Types } = require('mongoose');
 
+// schema for reaction which is an array of objects inside of the thoughts model
 const reactionSchema = new Schema(
     {
         reactionId: {
@@ -21,6 +22,7 @@ const reactionSchema = new Schema(
         }
     },
     {
+        // set getters true
         toJSON: {
             getters: true,
         },
@@ -28,6 +30,7 @@ const reactionSchema = new Schema(
     }
 );
 
+// the thought schema is the model for the thought itself
 const thoughtSchema = new Schema(
     {
         thoughtText: {
