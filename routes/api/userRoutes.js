@@ -3,6 +3,7 @@ const { User, Thought } = require('../../models');
 
 const
     {
+        // create the name of the functions used inside controllers
         getUsers,
         getUser,
         addUser,

@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User, Thought } = require('../../models');
 const
     {
+        // create the name of the functions used inside controllers
         getThoughts,
         addThoughts,
         getSingleThought,
@@ -10,7 +11,7 @@ const
         addReaction,
         deleteReaction,
     } = require('../../controllers/thoughtController');
-
+    
 router.route('/')
     .get(getThoughts)
     .post(addThoughts);
